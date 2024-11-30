@@ -1,6 +1,6 @@
 server {
   listen 80;
-  server_name kittygramsite.zapto.org;
+  server_name aboba228.zapto.org;
   index index.html;
   server_tokens off;
   client_max_body_size 20M;
@@ -21,7 +21,7 @@ server {
 
   location / {
     proxy_set_header Host $http_host;
-    alias /staticfiles/;
+    alias /static/;
     try_files $uri $uri/ /index.html;
   }
 }
