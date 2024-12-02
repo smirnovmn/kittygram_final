@@ -35,62 +35,61 @@
    cd kittygram_final
 
 2. **Создайте виртуальное окружение:**
-  ```bash
-  python3 -m venv venv
-  source venv/bin/activate  # Для Linux/macOS
-  venv\Scripts\activate     # Для Windows 
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # Для Linux/macOS
+   venv\Scripts\activate     # Для Windows 
 
 3. **Установите зависимости:**
-  ```bash
-  pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt
 
 4. **Настройте базу данных:**
-  -Вам нужно настроить параметры для подключения к базе данных. Вы можете сделать это через файл .env или через переменные окружения. Вот необходимые параметры:
+   -Вам нужно настроить параметры для подключения к базе данных. Вы можете сделать это через файл .env или через переменные окружения. Вот необходимые параметры:
 
-  -Создайте файл .env в корневой директории проекта (или настройте переменные окружения):
+   -Создайте файл .env в корневой директории проекта (или настройте переменные окружения):
 
-
-  ```bash
-  POSTGRES_USER=your_user
-  POSTGRES_PASSWORD=your_password
-  POSTGRES_DB=your_db
-  DB_HOST=localhost
-  DB_PORT=5432
-  SECRET_KEY=your_secret_key
-  DEBUG=True
+   ```bash
+   POSTGRES_USER=your_user
+   POSTGRES_PASSWORD=your_password
+   POSTGRES_DB=your_db
+   DB_HOST=localhost
+   DB_PORT=5432
+   SECRET_KEY=your_secret_key
+   DEBUG=True
 
 5. **Примените миграции и создайте суперпользователя**
-  -Теперь примените миграции базы данных и создайте суперпользователя для доступа к админке:
-  ```bash
-  python manage.py migrate
-  python manage.py createsuperuser
+   -Теперь примените миграции базы данных и создайте суперпользователя для доступа к админке:
+   ```bash
+   python manage.py migrate
+   python manage.py createsuperuser
 
 6. **Запустите сервер через Docker**
-  ```bash
-  docker-compose up --build
+   ```bash
+   docker-compose up --build
   
 -После этого проект будет доступен по адресу http://localhost:9000/.
 
 ### Развертывание на сервере
 
 1. **Клонируйте репозиторий на сервер:**
-  ```bash
-  git clone https://github.com/5mirnovvv/kittygram_final.git
-  cd kittygram_final
+   ```bash
+   git clone https://github.com/5mirnovvv/kittygram_final.git
+   cd kittygram_final
 
 2. **Запустите проект с помощью Docker Compose:**
-  -В каталоге с проектом выполните:
-  ```bash
-  docker-compose up -d --build
+   -В каталоге с проектом выполните:
+   ```bash
+   docker-compose up -d --build
 
 3. **Проверьте что контейнеры запустились:**
-  -В списке должны быть соотвествующие контейнеры
-  ```bash
-  docker-compose ps
+   -В списке должны быть соотвествующие контейнеры
+   ```bash
+   docker-compose ps
 
 4. **Для остановки и удаления контейнеров:**
-  ```bash
-  docker-compose down
+   ```bash
+   docker-compose down
   
 ## Автор проекта:
 
